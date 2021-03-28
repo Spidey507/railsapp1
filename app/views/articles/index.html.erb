@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="text text-success text-center">Tutorial de Rails</h1>
+    <h3 class="text-center">creado por Miguel Lezcano</h2>
+  </div>
+  <div class="row mt-5 mx-2">
+    <% @articles.each do |article| %>
+      <div class="col card mx-2" style="width: 18rem;">
+        <div class="card-header">
+          <h5 class="card-title"><%= article.title %></h5>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text"><%= article.body %></p>
+          <%= link_to "see more", article_path(article), class: "card-link" %>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<%= link_to "New Article", new_article_path, class:"row justify-content-center m-3" %>
+</div>

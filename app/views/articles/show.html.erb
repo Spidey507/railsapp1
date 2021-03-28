@@ -1,0 +1,21 @@
+<h1 class="text text-success text-center"><%= @Article.title%></h1>
+<h2 class="text text-center"><%= @Article.body%></h2>
+
+<p><%= "Views: #{@Article.views}"%></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@Article) %></li>
+  <li><%= link_to "Destroy", article_path(@Article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+
+<h2>Comments</h2>
+<%= render @Article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to "back", articles_path, class:"m-3" %>
+
