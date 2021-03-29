@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <h1 class="text text-success text-center">Tutorial de Rails</h1>
-    <h3 class="text-center">creado por Miguel Lezcano</h2>
+    <h3 class="text-center">better than reddit, ik</h2>
   </div>
   <div class="row mt-5 mx-2">
     <% @articles.each do |article| %>
@@ -10,7 +10,7 @@
           <h5 class="card-title"><%= article.title %></h5>
         </div>
         <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Descripcion:</h6>
           <p class="card-text"><%= article.body %></p>
           <%= link_to "see more", article_path(article), class: "card-link" %>
           <a href="#" class="card-link">Another link</a>
