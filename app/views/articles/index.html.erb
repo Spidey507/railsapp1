@@ -3,7 +3,8 @@
     <h1 class="text text-success text-center">Tutorial de Rails</h1>
     <h3 class="text-center">better than reddit, ik</h2>
   </div>
-  <div class="row mt-5 mx-2">
+<%= link_to "New Article", new_article_path, class:"row justify-content-center m-3" %>
+  <div class="row mt-4 mx-2">
     <% @articles.each do |article| %>
       <div class="col card mx-2" style="width: 18rem;">
         <div class="card-header">
@@ -18,5 +19,4 @@
       </div>
     <% end %>
   </div>
-<%= link_to "New Article", new_article_path, class:"row justify-content-center m-3" %>
 </div>
