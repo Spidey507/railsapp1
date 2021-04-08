@@ -1,9 +1,39 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <h1 class="text text-success text-center">Tutorial de Rails</h1>
-    <h3 class="text-center">better than reddit, ik</h2>
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="ruby.svg"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a class="nav-link px-2 text-success">Tutorial de Rails</a></li>
+        <li><a class="nav-link px-2 text-white">better than reddit, ik</a></li>
+        <%# <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">About</a></li> %>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <input type="search" class="form-control form-control-dark" placeholder="Search...">
+      </form>
+
+      <%# <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2">Login</button>
+        <button type="button" class="btn btn-warning">Sign-up</button>
+      </div> %>
+    </div>
   </div>
-<%= link_to "New Article", new_article_path, class:"row justify-content-center m-3" %>
+</header>
+
+<div class="container">
+  <div class="d-flex m-4">
+    <div class="p-2">
+      <h1 class="text text-success text-center">Recent Posts</h1>
+    </div>
+    <div class="mr-auto p-2 float-right">
+      <%= link_to "New Article", new_article_path, class:"btn btn-primary m-2" %>
+    </div>
+  </div>
   <div class="row mt-4 mx-2">
     <% @articles.each do |article| %>
       <div class="col card mx-2" style="width: 18rem;">
