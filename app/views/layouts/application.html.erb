@@ -26,6 +26,7 @@
               <%# <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
               <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
               <li><a href="#" class="nav-link px-2 text-white">About</a></li> %>
+              <%= button_to "logout", destroy_user_session_path, method: :delete  %>
             </ul>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
             <input type="search" class="form-control form-control-dark" placeholder="Search...">
@@ -41,6 +42,7 @@
     <p class="alert"><%= alert %></p>
             
     <%= yield %>
+    
     <footer class="footer mt-auto py-3 bg-dark ">
       <div class="container">
         <h6 class="text-muted text-center">Tutorial de Rails</h6>
