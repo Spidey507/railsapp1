@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
   def show
     @Article = Article.find(params[:id])
     @Article.increment!(:views)
+    @comments = @Article.comments.includes(:user)
   end
   def new
     @article = Article.new
