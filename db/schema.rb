@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2021_04_13_011807) do
 
-  create_table "Articles", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "views", default: 0
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_011807) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.integer "article_id", null: false
+    t.bigint "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
